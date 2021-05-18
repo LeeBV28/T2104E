@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main(){
 	int n;
 	printf("chuong trinh tim so nghich dao cua 1 so nguyen duong co 4 chu so\n");

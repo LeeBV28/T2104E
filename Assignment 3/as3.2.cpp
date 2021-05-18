@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main(){
 	int n=4000;
 	n=(n*0.08)+n;
