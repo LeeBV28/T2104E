@@ -27,13 +27,13 @@ int main(){
 	int m;
 	printf("\nNhap so mang can tang: \n");
 	scanf("%d",&m);
-	arr = (int *)realloc(arr,m*sizeof(int));
-	printf("nhap them %d phan tu ",m);
-	for(int i=n; i<m; i++){
+	arr = (int *)realloc(arr,(n+m)*sizeof(int));
+	printf("\nnhap them %d phan tu \n",m);
+	for(int i=n; i<(n+m); i++){
 		printf("Nhap phan tu thu %d: ",i);
 		scanf("%d",arr+i);
 	}
-	for(int i=0; i<m; i++){
+	for(int i=0; i<(n+m); i++){
 		int j=i-1;
 		int tmp=*(arr+i);
 		while(j>=0 && tmp<*(arr+j)){
@@ -41,9 +41,9 @@ int main(){
 			j--;
 		}*(arr+j+1)=tmp;
 	}
-	printf("So lon nhat la: %d\n",*(arr+m-1));
+	printf("So lon nhat la: %d\n",*(arr+(n+m-1)));
 	printf("Mang sau khi sap xep: \n");
-	for(int i=0; i<m; i++){
+	for(int i=0; i<(n+m); i++){
 		printf("%5d",*(arr+i));
 	}
 	
